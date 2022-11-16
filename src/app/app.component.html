@@ -1,10 +1,17 @@
-<h1>Fetch & display data from API</h1>
+
+<div class="font-bold container w-3/4 m-auto mt-20 text-white">
+  <h1 class=" flex justify-center items-center">
+    <span class="text-3xl flex justify-center items-center rounded-full w-12 h-12 bg-indigo-500">1</span>
+    <span class="text-4xl pl-3">Choose your exercises</span>
+  </h1>
+  <ul class="flex flex-wrap mt-12 text-lg justify-center">
+    <li 
+        *ngFor="let post of exercises"
+        class="w-1/5 bg-indigo-500 rounded-lg text-center p-8 box-border mx-2 mb-4">
+        {{ post.name }}
+      
+    </li>
+  </ul>
+</div>
+
   
-<ul class="list-group">
-  <li 
-      *ngFor="let post of exercises"
-      class="list-group-item">
-      {{ post.name }}
-      <div>{{ post.description }}</div>
-  </li>
-</ul>

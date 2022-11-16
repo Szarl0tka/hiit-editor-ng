@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300;600&display=swap');
+
+@layer base {
+    html {
+        font-family: 'Sono', sans-serif;
+    }
+    body {
+        background-color: rgb(165 180 252);
+    }
+}
