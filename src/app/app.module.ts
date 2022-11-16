@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { IndexStartComponent } from './components/index-start/index-start.component';
 import { ExercicesListComponent } from './components/exercices-list/exercices-list.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -16,7 +17,8 @@ import { ExercicesListComponent } from './components/exercices-list/exercices-li
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
