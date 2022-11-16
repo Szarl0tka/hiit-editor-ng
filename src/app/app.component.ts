@@ -9,14 +9,14 @@ import { ExerciseService } from './services/exercise.service';
 export class AppComponent {
 
   title = 'hiit-editor-ng';
-  posts:any;
+  exercises:any;
 
   constructor(private exerciseService:ExerciseService) {}
   
   ngOnInit() {
-      this.exerciseService.getPosts()
+      this.exerciseService.getPosts() 
         .subscribe((response: any) => {
-          this.posts = response;
+          this.exercises = response['results'];
         });
   }
   

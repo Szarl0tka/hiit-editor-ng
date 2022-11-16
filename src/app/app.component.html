@@ -1,9 +1,10 @@
-<h1>Angular 13 HttpClient for Sending Http Request Example - ItSolutionStuff.com</h1>
+<h1>Fetch & display data from API</h1>
   
 <ul class="list-group">
   <li 
-      *ngFor="let post of posts"
+      *ngFor="let post of exercises"
       class="list-group-item">
-      {{ post['Species Name'] }}
+      {{ post.name }}
+      <div>{{ post.description }}</div>
   </li>
 </ul>
