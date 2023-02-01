@@ -5,12 +5,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ExerciseService {
-  private url = 'https://wger.de/api/v2/exercise/?equipment=7';
+  private apiExercise = 'https://wger.de/api/v2/exercise/?equipment=7&limit=40&language=2';
+  private apiExerciseImages = 'https://wger.de/api/v2/exerciseimage/';
   // private API_KEY = 'b82b208a0dbd9f52b1b03a37e97c901195b59d50';
 
   constructor(private httpClient: HttpClient) { }
 
-  getPosts(){
-    return this.httpClient.get(`https://wger.de/api/v2/exercise/?equipment=7&limit=40&language=2`);
+  getExercisesApi(){
+    return this.httpClient.get(this.apiExercise);
+  }
+
+  getExerciseImagesApi(){
+    return this.httpClient.get(this.apiExerciseImages);
   }
 }

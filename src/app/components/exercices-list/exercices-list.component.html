@@ -4,8 +4,22 @@
 </h1>
 <ul class="flex flex-wrap mt-12 text-lg justify-between">
     <li 
-        *ngFor="let post of exercises"
-        class="w-1/7 bg-indigo-500 rounded-lg text-center p-8 box-border mx-2 mb-4 flex-1 whitespace-nowrap">
-        {{ post.name }}
+        *ngFor="let exo of apiExercises"
+        class="cursor-pointer bg-indigo-500 rounded-lg text-center p-8 box-border mx-2 mb-4 flex-1 whitespace-nowrap">
+        
+        <div >{{ exo.name }}
+        <figure *ngFor="let thumbnail of apiThumbnails"  >
+            <img *ngIf="exo.exercise_base === thumbnail.exercise_base" src="{{ thumbnail.image }}" alt="" class="block max-w-full bg-white rounded-lg h-full p-3  ">
+        </figure>
+    </div>
     </li>
+</ul>
+<div class="flex flex-wrap mt-12 justify-between w-full ">
+    <!-- <figure *ngFor="let thumbnail of apiThumbnails"  class="w-1/6 h-32 overflow-hidden p-3 box-border m-1">
+        <img src="{{ thumbnail.image }}" alt="" class="block max-w-full bg-white rounded-lg h-full p-3  ">
+    </figure>
+     -->
+</div>
+<ul >
+    <li *ngFor="let id of exercisesBaseIds">{{ id }}</li>
 </ul>
